@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The band</title>
+    <link rel="icon" href="data:image/png;base64,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" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- begin:nav -->
+            <ul id="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#band">band</a></li>
+                    <li><a href="#tour">Tour</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <a href="">
+                            More
+                            <i class="nav-arow-down ti-angle-down"></i>
+                        </a>
+                        <ul class="subnav">
+                                <li><a href="#">Merssssss</a></li>
+                                <li><a href="#">Astra</a></li>
+                                <li><a href="#">Media</a></li>
+                        </ul>
+                    </li>
+            </ul>
+            <!-- end:nav -->
+
+            <!-- begin:search -->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+            <!-- end:search -->
+
+
+
+
+        </div>
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">New York</h2>
+                <div class="text-description">The atmosphere in New York is lorem ipsum.</div>
+
+            </div>
+
+        </div>
+        <div id="content">
+            <!-- about -->
+            <div id="band" class="content-selection">
+                <h1 class="heading-content">THE BAND</h1>
+                <p class="sub-heading">We love music</p>
+                <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                    commodo consequat.
+                </p>
+                <div class="row member-list">
+                    <div class="col col-third text-center">
+                        <p class="member-name">Name</p>
+                        <img src="./assets/img/band/bandmember.jpeg" alt="name" class="member-img">
+                    </div>
+                    <div class="col col-third text-center">
+                        <p class="member-name">Name</p>
+                        <img src="./assets/img/band/bandmember.jpeg" alt="name" class="member-img">
+                    </div>
+                    <div class="col col-third text-center">
+                        <p class="member-name">Name</p>
+                        <img src="./assets/img/band/bandmember.jpeg" alt="name" class="member-img">
+                    </div>
+                </div>
+
+            </div>
+            <!-- tour -->
+            <div id="tour" class="tour-selection">
+                <div class="content-selection">
+                    <h1 class="heading-content text-white">TOUR DATES</h1>
+                    <p class="sub-heading text-white">Remember to book your tickets!</p>
+                    <ul class="tickeds-list">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>October <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">3</span></li>
+                    </ul>
+                    <!-- ticket-list -->
+                    <div class="row place-list">
+                        <div class="col col-third">
+                            <img src="./assets/img/place/place1.jpeg" alt="New york" class="img-place">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button  class="btn s-full-width  js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="col col-third">
+                            <img src="./assets/img/place/place2.jpeg" alt="Paris" class="img-place">
+                            <div class="place-body">
+                                <h3 class="place-heading">Paris </h3>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button  class="btn s-full-width  js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="col col-third">
+                            <img src="./assets/img/place/place3.jpeg" alt="New york" class="img-place">
+                            <div class="place-body">
+                                <h3 class="place-heading">San Francisco</h3>
+                                <p class="place-time">Sun 29 Nov 2016 </p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <button  class="btn s-full-width  js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                    </div> 
+
+                </div>
+               
+            </div>
+            <!-- end tour -->
+           
+            <!-- contact -->
+            <div id="contact" class="content-selection">
+                <h1 class="heading-content">CONTACT</h1>
+                <p class="sub-heading">Fan? Drop a note!</p>
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p><i class="ti-location-pin"></i>Chicago, US</p>
+                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                    </div>
+                    <div class="col col-half contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input type="text" name="Name"placeholder="Name"required id="" class="form-control">
+                                </div>
+                                <div class="col col-half">
+                                    <input type="text" name="Email"placeholder="Email" required id="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input type="text" name="Message"placeholder="Message" required id="" class="form-control">
+                                </div>
+
+                            </div>
+                            <input class="btn pull-right mt-16" type="submit" value="SEND">
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- end contact -->    
+            <div class="map-selection">
+                <img src="./assets/img/map.jpeg" alt="" srcset="">
+            </div>
+        </div>
+        <div id="footer">
+            <div class="socials-list ">
+                <a href=""><i class="ti-facebook "> </i></a>
+                <a href=""><i class="ti-instagram "> </i></a>
+                <a href=""><i class="ti-youtube "> </i></a>
+                <a href=""><i class="ti-pinterest "> </i></a>
+                <a href=""><i class="ti-twitter "> </i></a>
+            </div>
+            <p class="copyright">Powered by <a href="">w3.css</a> </p>
+        </div>
+    </div>
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+            <header class="modal-header">
+                <i class="modal-heading-icon ti-bag"></i>
+                Tickets
+            </header>
+
+            <div class="modal-body">
+                <label for="ticket-quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many?">
+
+                <label for="ticket-email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input id="ticket-email" type="text" class="modal-input" placeholder="Enter email..">
+                <button id="buy-tickets">
+                    pay
+                    <i class="ti-check"></i>
+                </button>  
+            </div>
+            <footer class="modal-footer">
+                Need 
+                <a href="#">help</a>
+            </footer>
+        </div>
+    </div>
+    
+    <script>
+        const buyBtns =document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+        
+        //Hàm hiển thị modal mua vé(thêm class open vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+        // Hàm ẩn modal mua vé(gỡ bỏ open class của modal)
+        function hideBuyTickets(){
+            modal.classList.remove('open')
+        }
+        // Lặp qua từng thẻ button và nghe hành vi click
+        for(const buyBtn  of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+        // nghe hành vi vào button close 
+            modalClose.addEventListener('click',hideBuyTickets)
+
+            modal.addEventListener('click',hideBuyTickets)
+
+            modalContainer.addEventListener('click', function(event){
+                event.stopPropagation()
+            })
+    </script>
+    
+</body>
+</html>
